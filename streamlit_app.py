@@ -44,10 +44,10 @@ streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
 
 def insertar_fruta(fruta):
-    cursor = conn.cursor()
+    cursor = my_cnx.cursor()
     query = f"INSERT INTO FRUIT_LOAD_LIST (FRUIT_NAME) VALUES ('{fruta}')"
     cursor.execute(query)
-    conn.commit()
+    my_cnx.commit()
 
 fruta = streamlit.text_input('What fruit would you like to add?')
 insertar_fruta(insertar_fruta)
