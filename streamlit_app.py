@@ -51,3 +51,5 @@ def insertar_fruta(fruta):
 
 fruta = streamlit.text_input('What fruit would you like to add?')
 streamlit.write('The user entered ', fruta)
+
+conn.close()
