@@ -50,6 +50,7 @@ def insertar_fruta(fruta):
     conn.commit()
 
 fruta = streamlit.text_input('What fruit would you like to add?')
+insertar_fruta(insertar_fruta)
 streamlit.write('The user entered ', fruta)
 
-conn.close()
+
